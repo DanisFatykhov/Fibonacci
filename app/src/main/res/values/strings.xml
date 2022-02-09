@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fibonacci</string>
+
+    <!--MainActivity-->
+    <string name="prime_numbers">Простые числа</string>
+    <string name="fibonacci_numbers">Числа Фибоначчи</string>
+</resources>
