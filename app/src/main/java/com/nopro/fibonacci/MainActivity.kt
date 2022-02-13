@@ -2,6 +2,7 @@ package com.nopro.fibonacci
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.GridLayoutManager
 import com.nopro.fibonacci.databinding.ActivityMainBinding
 
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         numbersItemList = ArrayList()
 
-        for (i in 1..15) {
+        for (i in 1..1000) {
             numbersItemList.add(i)
         }
 
@@ -25,5 +26,23 @@ class MainActivity : AppCompatActivity() {
 
         binding.rvNumbers.adapter = mAdapter
         binding.rvNumbers.layoutManager = GridLayoutManager(this, 2)
+
+        binding.primeNumbers.setOnClickListener {
+            numbersItemList.clear()
+            for (i in 1..1000) {
+                numbersItemList.add(i)
+            }
+            mAdapter.updateList(numbersItemList)
+        }
+
+        binding.fibonacciNumbers.setOnClickListener {
+            numbersItemList.clear()
+            for (i in 1000..2000) {
+                numbersItemList.add(i)
+            }
+            mAdapter.updateList(numbersItemList)
+        }
+
+
     }
 }

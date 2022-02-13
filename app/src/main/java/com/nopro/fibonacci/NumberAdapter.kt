@@ -36,4 +36,10 @@ class NumberAdapter(private val context: Context, private var numbersItemList: A
             binding.txtNumber.text = numberItem.toString()
         }
     }
+
+    fun updateList(newList: List<Int>) {
+        numbersItemList.addAll(newList)
+        notifyDataSetChanged()
+    }
+
 }
